@@ -61,7 +61,7 @@ public class RTPaymentService {
 	}
 
 	private static List<RTPaymentBank> fetchByBankName(String value) {
-		Predicate<RTPaymentBank> banksByName = b -> (b.getBankName() == value) ;
+		Predicate<RTPaymentBank> banksByName = b -> (b.getBankName().startsWith(value));
 		List<RTPaymentBank> resultSet = bankList.stream().filter(banksByName).sorted(Comparator.
 				comparing(RTPaymentBank::getType)).collect(Collectors.toList());
 		return resultSet;
