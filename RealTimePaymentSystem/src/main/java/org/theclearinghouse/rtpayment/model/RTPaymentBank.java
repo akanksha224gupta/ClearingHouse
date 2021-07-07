@@ -66,7 +66,7 @@ public class RTPaymentBank {
 	}
 
 	public String toString() {
-		return String.format("%-3d -%20s -%8s -%17s -%4s %6d", getID(), getBankName(), getType(), getState(), getCity(),
+		return String.format("%-3d %-20s %-8s %-17s %-4s %6d", getID(), getBankName(), getType(), getState(), getCity(),
 				getZipCode());
 	}
 }
